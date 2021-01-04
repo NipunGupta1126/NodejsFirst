@@ -12,7 +12,7 @@ weatherform.addEventListener('submit',(e)=>{
     e.preventDefault()
     const loc = search.value
     console.log(loc);
-    const url = 'http://localhost:3000/weather?address='+loc
+    const url = '/weather?address='+loc
 
     messageOne.textContent = 'Loading....'
     messageTwo.textContent = ''

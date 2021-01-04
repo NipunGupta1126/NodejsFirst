@@ -4,6 +4,7 @@ const path = require('path');
 const geocode = require('./weatherApp/geocode.js')
 const forecast = require('./weatherApp/forecast.js');
 const { response } = require('express');
+const port = process.env.PORT || 3000
 
 const ex = express();
 const helperPath = path.join(__dirname,'/public');
@@ -79,6 +80,6 @@ ex.get('*',(req,res)=>{
 
 
 
-ex.listen(3000,()=>{
-    console.log('STarting Server');
+ex.listen(port,()=>{
+    console.log('STarting Server on '+port);
 })
